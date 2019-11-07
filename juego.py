@@ -11,7 +11,8 @@ def main():
 
 
 def vof(dec):
-    if dec==ACTIVOS 
+    if dec==ACTIVOS CIRCULANTES:
+    
 
 def leer():
     y=str(input("Que tipo de cargo es ")).upper()
