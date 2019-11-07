@@ -3,16 +3,32 @@ AC= ["BANCO" ,"INVERSIONES TEMPORALES", "CLIENTES", "DEUDORES DIVERSOS" ,"DOCUME
 ANC=["TERRENOS","EDIFICIOS","MOVILIARIO","EQUIPO DE TRANPORTE", "EQUIPO DE COMPUTO "]
 PCP=["PROVEDORES","ACREDORES DIVERSOS","DOCUMENTOS POR PAGAR","PRESTAMOS BACARIOS A CORTO PLAZO","COBROS ANTICIPADOS"]
 
+
 def main():
     x, y = aletorio()
-    print(x,y)
     dec=leer()
-    print("Que tipo de cargo es \n ",dec)
+    elret=vof(dec)
+    comp(elret,y)
 
+def comp(res,y):
+    if res==y:
+        print("Felicidades")
+    else:
+        print("Te equivocaste")
 
 def vof(dec):
-    if dec==ACTIVOS CIRCULANTES:
-    
+    if dec=="ACTIVOS CIRCULANTES":
+        print("ACTIVOS")
+        elret=0
+    elif dec=="ACTIVOS NO CIRCULANTES":
+        print("ACTIVOS NO CIRCULANTES")
+        elret=1
+    elif dec=="PASIVOS A CORTO PLAZO":
+        print("PASIVOS A CORTO PLAZO")
+        elret=2
+    else:
+        elret=404
+    return elret
 
 def leer():
     y=str(input("Que tipo de cargo es ")).upper()
@@ -32,13 +48,3 @@ def aletorio():
     return x,y
 if __name__=='__main__':
     main()
-
-
-
-"""
-C=str(input("Dame un array")).upper()
-if C in AC: # Imprime lo de abajo
-    print("CORRECTO")
-else:
-    print("Falso")
-"""
